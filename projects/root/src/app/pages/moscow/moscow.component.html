@@ -1,0 +1,21 @@
+<button mat-raised-button color="primary" (click)="openAddEntryDialog()"><mat-icon>add</mat-icon>Add</button>
+<div cdkDropListGroup>
+  @for (element of data; track element) {
+    <div class="example-container">
+      <h2>{{ element.title }}</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="element.values"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        @for (item of element.values; track item) {
+          <div class="example-box" cdkDrag>{{item}}</div>
+        } @empty {
+          <div class="example-box"><i>No data</i></div>
+        }
+      </div>
+    </div>
+  }
+</div>
+
+<button mat-raised-button color="primary" (click)="deleteData()"><mat-icon>delete</mat-icon>Delete</button>

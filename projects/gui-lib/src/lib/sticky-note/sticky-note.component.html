@@ -1,0 +1,7 @@
+<mat-card [ngStyle]="{'left.px': stickyNote.x, 'top.px': stickyNote.y}"
+          class="note"
+          [ngClass]="stickyNote.color"
+          cdkDrag
+          (cdkDragReleased)="onDragEnded($event)">
+  <mat-card-content>{{stickyNote.text}}</mat-card-content>
+</mat-card>

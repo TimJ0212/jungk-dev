@@ -9,6 +9,9 @@
     "paths": {
       "gui-lib": [
         "./dist/gui-lib"
+      ],
+      "std-lib": [
+        "./dist/std-lib"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,

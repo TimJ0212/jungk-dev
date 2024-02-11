@@ -1,0 +1,19 @@
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Text</mat-label>
+    <input matInput [(ngModel)]="data.value">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Category</mat-label>
+    <mat-select [(ngModel)]="data.title">
+      <mat-option value="must">Must</mat-option>
+      <mat-option value="should">Should</mat-option>
+      <mat-option value="could">Could</mat-option>
+      <mat-option value="wont">Wont</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

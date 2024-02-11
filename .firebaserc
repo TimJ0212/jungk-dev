@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "jungk-dev"
+  },
+  "targets": {
+    "jungk-dev": {
+      "hosting": {
+        "root": [
+          "jungk-dev"
+        ],
+        "moscow": [
+          "jungk-dev-moscow"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
