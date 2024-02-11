@@ -53,15 +53,13 @@ export class MoscowComponent implements OnInit {
 
   openAddEntryDialog() {
     const dialogRef = this.dialog.open(AddEntryDialogComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result)
+    dialogRef.afterClosed().subscribe(result =>
       this.data.forEach(value => {
         if (value.title === result.title) {
           value.values.push(result.value)
         }
-      })
-    })
-  }
+      }))
+    }
 
   private persist() {
     this.data.forEach(element => localStorage.setItem(`moscow:${element.title}`, JSON.stringify(element.values)))

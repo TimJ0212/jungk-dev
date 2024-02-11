@@ -1,0 +1,13 @@
+<ng-container class="flex-container">
+  @if (edit) {
+    <mat-card class="mat-card-fixed-width">
+      <mat-card-content>
+        <input #inputField type="text" [(ngModel)]="value" (blur)="edit = false" (focusout)="edit = false" autofocus>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <mat-card (click)="edit = true" class="mat-card-fixed-width">
+      <mat-card-content>{{ value }}</mat-card-content>
+    </mat-card>
+  }
+</ng-container>

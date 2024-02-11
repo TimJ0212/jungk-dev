@@ -1,0 +1,19 @@
+/* Fixed Width */
+.mat-card-fixed-width {
+  width: 300px; /* Adjust as needed */
+}
+
+/* Min-Width */
+.mat-card-min-width {
+  min-width: 250px; /* Adjust as needed */
+}
+
+/* Flex Container Example */
+.flex-container {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+}
+
+.flex-container .mat-card {
+  flex: 0 1 300px; /* flex-grow, flex-shrink, flex-basis */
+}

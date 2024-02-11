@@ -10,5 +10,10 @@ export const routes: Routes = [
     path: "moscow",
     pathMatch: "full",
     loadComponent: () => import("./pages/moscow/moscow.component").then(m => m.MoscowComponent)
+  },
+  {
+    path: "sprint-review",
+    pathMatch: "full",
+    loadComponent: () => import("./pages/sprint-review/sprint-review.component").then(m => m.SprintReviewComponent)
   }
 ];

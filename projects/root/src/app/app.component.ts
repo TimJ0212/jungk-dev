@@ -25,7 +25,12 @@ export class AppComponent {
     name: 'MoSCoW',
     icon: "liquor",
     link: "/moscow"
-  }]
+  },
+    {
+      name: 'Sprint Review',
+      icon: "group",
+      link: "/sprint-review"
+    }]
 
   constructor(public router: Router){
   }

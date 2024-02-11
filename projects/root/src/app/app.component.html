@@ -1,4 +1,4 @@
-<mat-toolbar>@for (app of apps; track app.name) {
+<mat-toolbar class="toolbar">@for (app of apps; track app.name) {
   <button mat-raised-button color="primary" [routerLink]="app.link"><mat-icon>{{app.icon}}</mat-icon>{{app.name}}</button>
 }</mat-toolbar>
 <router-outlet></router-outlet>

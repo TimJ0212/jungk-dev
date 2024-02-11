@@ -1,0 +1,11 @@
+<div cdkDropListGroup class="container">
+  @for (category of data; track category) {
+    <div>
+      <h2>{{category.title}}</h2>
+      @for (value of category.values; track value) {
+        <lib-editable-card [matBadge]="value.likes" matBadgePosition="above after"></lib-editable-card>
+      }
+      <button mat-fab color="primary" (click)="addNote(category.title)"><mat-icon>add</mat-icon></button>
+    </div>
+  }
+</div>
